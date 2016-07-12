@@ -8,7 +8,7 @@ using Windows.Data.Json;
 
 namespace Aber.Core.Http
 {
-    class APIService:APIBaseService
+    public class APIService:APIBaseService
     {
         public async Task<Users> Login(string name,string password)
         {

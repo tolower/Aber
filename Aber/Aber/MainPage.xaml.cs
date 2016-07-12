@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Aber.Core.Http;
+using Aber.Core.Model;
+
 
 //“空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409 上有介绍
 
@@ -25,6 +28,13 @@ namespace Aber
         public MainPage()
         {
             this.InitializeComponent();
+            
+        }
+
+        private async void login()
+        {
+            APIService service = new APIService();
+            Users user = await service.Login("18629312030", "123456");
         }
     }
 }

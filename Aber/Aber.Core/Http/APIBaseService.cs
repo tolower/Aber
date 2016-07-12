@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace Aber.Core.Http
 {
-    class APIBaseService
+    public class APIBaseService
     {
         private void Printlog(string info)
         {

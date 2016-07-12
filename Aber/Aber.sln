@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aber", "Aber\Aber.csproj", "{2000F00B-67BC-4413-8460-A75104144522}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08D7A2D7-2A45-4C08-B25F-5D5CDAAE4164} = {08D7A2D7-2A45-4C08-B25F-5D5CDAAE4164}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aber.Core", "Aber.Core\Aber.Core.csproj", "{08D7A2D7-2A45-4C08-B25F-5D5CDAAE4164}"
 EndProject

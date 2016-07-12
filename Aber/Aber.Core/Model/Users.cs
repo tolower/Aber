@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aber.Core.Model
 {
-    class Users
+    public class Users
     {
         ///
         public string UserID { get; set; }
