@@ -15,7 +15,7 @@ namespace Aber.Core.Http
 {
     public class APIBaseService
     {
-        private void Printlog(string info)
+        protected void Printlog(string info)
         {
 #if DEBUG
             Debug.WriteLine(DateTime.Now.ToString() + " " + info);
@@ -43,11 +43,11 @@ namespace Aber.Core.Http
                 return null;
             }
         }
-        protected async Task<JsonObject> PostJson(string url,string body)
+        protected async Task<JsonObject> PostJson(string url, Dictionary<string, string> dict)
         {
             try
             {
-                string json = await BaseService.SendPostRequest(url,body);
+                string json = await BaseService.SendPostRequest(url,dict);
                 if (json != null)
                 {
                     Printlog("请求Json数据成功 URL：" + url);

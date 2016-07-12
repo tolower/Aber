@@ -28,13 +28,14 @@ namespace Aber
         public MainPage()
         {
             this.InitializeComponent();
-            
+            login();
         }
 
         private async void login()
         {
             APIService service = new APIService();
             Users user = await service.Login("18629312030", "123456");
+            textBlock.Text = user.UserName;
         }
     }
 }

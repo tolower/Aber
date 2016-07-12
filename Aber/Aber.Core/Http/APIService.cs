@@ -12,8 +12,12 @@ namespace Aber.Core.Http
     {
         public async Task<Users> Login(string name,string password)
         {
-            string body = "name=" + name + "&password=" + password + "&type=1";
-            JsonObject json = await PostJson(APIUrl.LoginUrl,body);
+            Dictionary<string,string> param= new Dictionary<string, string>();
+            param.Add("name", name);
+            param.Add("password", password);
+            param.Add("type", "1");
+            JsonObject json = await PostJson(APIUrl.LoginUrl, param);
+            Printlog(json.ToString());
             if (json != null)
             {
                 var succeed = json["succeed"].GetNumber();

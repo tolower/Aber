@@ -62,12 +62,13 @@ namespace Aber.Core.Http
         /// <param name="url"></param>
         /// <param name="body"></param>
         /// <returns></returns>
-        public async static Task<string> SendPostRequest(string url, string body)
+        public async static Task<string> SendPostRequest(string url, Dictionary<string, string> dict)
         {
             try
             {
                 HttpRequestMessage mSent = new HttpRequestMessage(HttpMethod.Post, new Uri(url));
-                mSent.Content = new HttpStringContent(body, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json; charset=utf-8");
+                mSent.Content = new HttpFormUrlEncodedContent(dict);
+                //mSent.Content = new HttpStringContent(body, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json; charset=utf-8");
                 HttpClient client = new HttpClient();
                 HttpResponseMessage response = await client.SendRequestAsync(mSent);
                 response.EnsureSuccessStatusCode();
