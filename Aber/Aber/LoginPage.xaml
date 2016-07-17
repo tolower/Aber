@@ -41,8 +41,13 @@
                     <Button Content="登录" Margin="0,5" Padding="40,4" HorizontalAlignment="Stretch"/>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Margin="0,5">
-                    <HyperlinkButton Content="注册" Margin="0,5,0,0"></HyperlinkButton>
-                    <HyperlinkButton Content="找回密码" Margin="0,5,0,0"></HyperlinkButton>
+                    <HyperlinkButton x:Name="registerHyperLinkBtn" Content="注册" 
+                                     Margin="0,5,0,0"
+                                     Click="registerHyperLinkBtn_Click"></HyperlinkButton>
+                    <HyperlinkButton x:Name="getpwdHyperLinkBtn" Content="找回密码"
+                                     Margin="0,5,0,0" 
+                                     Click="getpwdHyperLinkBtn_Click"
+                                     ></HyperlinkButton>
                 </StackPanel>
             </Grid>
         </StackPanel>
