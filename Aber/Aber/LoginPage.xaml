@@ -19,8 +19,8 @@
             <Image Source="Assets/logo/logo.png"
                    Width="300"></Image>
         </StackPanel>
-        
-        <StackPanel Grid.Row="1"
+
+        <StackPanel x:Name="stackPanel" Grid.Row="1"
                     Margin="10 30 10 0">
             <Grid>
                 <Grid.RowDefinitions>
@@ -31,14 +31,21 @@
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
                     <TextBlock Text="手机号" Margin="0,5"/>
-                    <TextBox InputScope="TelephoneNumber" />
+                    <TextBox x:Name="name" InputScope="TelephoneNumber" />
                 </StackPanel>
                 <StackPanel Grid.Row="1">
                     <TextBlock Text="密码" Margin="0,5"/>
-                    <PasswordBox Password="" />
+                    <PasswordBox x:Name="password" Password="" />
                 </StackPanel>
-                <StackPanel Grid.Row="2" HorizontalAlignment="Center" >
-                    <Button Content="登录" Margin="0,5" Padding="40,4" HorizontalAlignment="Stretch"/>
+                <StackPanel Grid.Row="2" 
+                            Padding="0 5 0 0"
+                            HorizontalAlignment="Center" >
+                    <Button x:Name="loginBtn" Content="登录" 
+                            
+                            Width="{Binding ActualWidth, ElementName=stackPanel, Mode=OneWay}"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            UseLayoutRounding="True" Click="loginBtn_Click" />
                 </StackPanel>
                 <StackPanel Grid.Row="3" Margin="0,5">
                     <HyperlinkButton x:Name="registerHyperLinkBtn" Content="注册" 

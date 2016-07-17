@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aber.Core.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace Aber
     /// </summary>
     public sealed partial class LoginPage : Page
     {
+        LoginVM loginVM = new LoginVM();
         public LoginPage()
         {
             this.InitializeComponent();
@@ -43,6 +45,17 @@ namespace Aber
         private void getpwdHyperLinkBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(GetPasswordPage), null);
+        }
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void loginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var name = this.name.Text;
+            var password = this.password.Password;
+            loginVM.Login(name,password);
         }
     }
 }
