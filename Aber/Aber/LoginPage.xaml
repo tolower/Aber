@@ -9,8 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0"
@@ -31,20 +31,23 @@
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
                     <TextBlock Text="手机号" Margin="0,5"/>
-                    <TextBox />
+                    <TextBox InputScope="TelephoneNumber" />
                 </StackPanel>
                 <StackPanel Grid.Row="1">
                     <TextBlock Text="密码" Margin="0,5"/>
-                    <TextBox />
+                    <PasswordBox Password="" />
                 </StackPanel>
                 <StackPanel Grid.Row="2" HorizontalAlignment="Center" >
-                    <Button Content="登录" Width="100" Margin="0,5"/>
+                    <Button Content="登录" Margin="0,5" Padding="40,4" HorizontalAlignment="Stretch"/>
                 </StackPanel>
-                <StackPanel Grid.Row="3">
-                    <HyperlinkButton Content="注册"></HyperlinkButton>
-                    <HyperlinkButton Content="找回密码"></HyperlinkButton>
+                <StackPanel Grid.Row="3" Margin="0,5">
+                    <HyperlinkButton Content="注册" Margin="0,5,0,0"></HyperlinkButton>
+                    <HyperlinkButton Content="找回密码" Margin="0,5,0,0"></HyperlinkButton>
                 </StackPanel>
             </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="@西安安步网络科技有限公司" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
         </StackPanel>
     </Grid>
 </Page>
