@@ -26,12 +26,20 @@ namespace Aber
         {
             this.InitializeComponent();
         }
-
+        /// <summary>
+        /// 注册
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void registerHyperLinkBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RegisterPage),null);
         }
-
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void getpwdHyperLinkBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(GetPasswordPage), null);
